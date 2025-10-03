@@ -1,0 +1,174 @@
+:root {
+    --cuyano-dark-blue: #212f66;
+    --cuyano-primary-dark: #1a1a2e;
+    --cuyano-accent-gold: #ffc107;
+    --cuyano-text-light: #fffafa;
+    --cuyano-text-dark: #343a40; 
+    --cuyano-card-background: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    overflow-x: hidden; 
+}
+
+.custom-navbar, 
+.hero-section,
+.bg-dark-subtle,
+.custom-footer {
+    color: var(--cuyano-text-light); 
+}
+
+.custom-card .card-text {
+    color: var(--cuyano-text-dark) !important; 
+}
+
+/* Header y Navegación */
+.custom-navbar {
+    background-color: var(--cuyano-primary-dark); 
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--cuyano-accent-gold); 
+}
+
+.custom-navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--cuyano-text-light) !important;
+}
+
+.custom-navbar .nav-link {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7) !important;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    color: var(--cuyano-text-light) !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.custom-navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Sección Hero */
+.hero-section {
+    background-color: var(--cuyano-dark-blue); 
+    min-height: 400px; 
+    position: relative; 
+}
+
+.hero-section h1 {
+    font-size: 4.5rem; 
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+
+.hero-section .highlight-text {
+    color: var(--cuyano-accent-gold); 
+}
+
+.hero-section .lead-lg {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+/* Sección de Contenido y Cards */
+.bg-dark-subtle {
+    background-color: var(--cuyano-dark-blue) !important; 
+}
+
+.bg-dark-subtle h2 {
+    color: var(--cuyano-text-light) !important; 
+}
+
+.custom-card { 
+    border: none;
+    border-top: 4px solid var(--cuyano-accent-gold); 
+    background-color: var(--cuyano-card-background); 
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; 
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+
+.custom-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25) !important; 
+}
+
+.card h3 {
+    color: var(--cuyano-dark-blue); 
+    font-weight: 700;
+}
+
+/* Footer */
+.custom-footer {
+    background-color: var(--cuyano-text-dark); 
+    padding: 1.5rem 0;
+}
+
+.custom-footer a {
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.custom-footer a:hover {
+    color: var(--cuyano-accent-gold) !important; 
+}
+
+/* Media Queries (Responsividad) */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+    .hero-section .lead-lg {
+        font-size: 1.5rem;
+    }
+    .hero-section {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+    .hero-section .lead-lg {
+        font-size: 1.2rem;
+    }
+    .custom-navbar .navbar-nav {
+        text-align: center; 
+        padding-top: 10px;
+    }
+    .custom-footer .text-md-end {
+        text-align: center !important; 
+        margin-top: 10px;
+    }
+    .custom-footer a {
+        display: block; 
+        margin: 5px 0;
+    }
+    .custom-footer span {
+        display: none; 
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section .lead-lg {
+        font-size: 1rem;
+    }
+    .hero-section {
+        min-height: 250px;
+    }
+}
